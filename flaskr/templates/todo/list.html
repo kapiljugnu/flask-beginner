@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List Todo</title>
+    <script src="{{ url_for('static', filename='js/htmx.org@1.9.6_dist_htmx.min.js') }}"></script>
+</head>
+<body>
+    <div id="content">
+        <a href="/create">Create</a>
+        {% for todo in todos %}
+            <p>{{ todo['id'] }} {{ todo['task'] }}</p>
+        {% endfor %}
+    </div>
+</body>
+</html>

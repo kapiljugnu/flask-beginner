@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Todo</title>
+        <script src="{{ url_for('static', filename='js/htmx.org@1.9.6_dist_htmx.min.js') }}"></script>
+</head>
+<body>
+    <div id="content">
+         <form method="post" action="/create">
+            <input name="task" type="text" required />
+            <button>Submit</button>
+         </form>
+    </div>
+</body>
+</html>
